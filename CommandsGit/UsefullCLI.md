@@ -7,7 +7,7 @@
 Note: Here if the aut not possible via WSL, you wiull get a code in the WSL session and a Github Portal address so you can auth with that code. 
 
 # Diagram:
-![GitHub Login WSL Flow](ImagesGit/github_login_flow.png)
+![GitHub Login WSL Flow](../ImagesGit/github_login_flow.png)
 
 ## Modify a Repository or add inforamtion:
 
