@@ -32,7 +32,7 @@ Push the change to the file in GitHub Repo:
 - git push
 
 # Diagram:
-![GitHub Modify Repo](GitHub/ImagesGit/modify_repo_add_content_final.png)
+![GitHub Modify Repo](../ImagesGit/modify_repo_add_content_final.png)
 
 ## To Update a file: 
 
@@ -59,7 +59,7 @@ Push the change to the file in GitHub Repo:
 - git push
 
 # Diagram:
-![GitHub Update Repo](/GitHub/ImagesGit/update_existing_file.png)
+![GitHub Update Repo](../ImagesGit/update_existing_file.png)
 
 ## To upload images: 
 
@@ -75,7 +75,7 @@ or
 - git push
 
 # Diagram:
-![GitHub Update Images](/GitHub/ImagesGit/upload_images_flow.png)
+![GitHub Update Images](../ImagesGit/upload_images_flow.png)
 
 
 
