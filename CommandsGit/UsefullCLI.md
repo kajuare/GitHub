@@ -6,6 +6,9 @@
 - gh auth login
 Note: Here if the aut not possible via WSL, you wiull get a code in the WSL session and a Github Portal address so you can auth with that code. 
 
+# Diagram:
+![GitHub Login WSL Flow](/GitHub/ImagesGit/github_login_flow.png)
+
 ## Modify a Repository or add inforamtion:
 
 Move to the projects folder in your local PC (WSL - ~/gitprojects/)
@@ -27,6 +30,9 @@ Confirm Change with a message:
 
 Push the change to the file in GitHub Repo:
 - git push
+
+# Diagram:
+![GitHub Modify Repo](/GitHub/ImagesGit/modify_repo_add_content_final.png)
 
 ## To Update a file: 
 
@@ -51,3 +57,25 @@ Confirm Change with a message:
 
 Push the change to the file in GitHub Repo:
 - git push
+
+# Diagram:
+![GitHub Update Repo](/GitHub/ImagesGit/update_existing_file.png)
+
+## To upload images: 
+
+If there is no specific folder for images, crete it: 
+- mkdir /gitprojects/Repository/ImageFolder
+- cp /mnt/c/Users/YOUR_WINDOWS_USERNAME/Downloads/screenshot.png ~/gitprojects/gitprojects/Repository/ImageFolder/ImageName.png
+
+Commit and push like normal:
+- git add Repo-Folder/Image-Folder/IMAGE.png Repo-Folder/File-name.md
+or
+- git add GitHub/   -- this informs abput multiple changes on the specific repo.
+- git commit -m "Add SSPR config screenshot to Entra ID notes"
+- git push
+
+# Diagram:
+![GitHub Update Images](/GitHub/ImagesGit/upload_images_flow.png)
+
+
+
