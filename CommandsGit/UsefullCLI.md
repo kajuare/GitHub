@@ -12,19 +12,42 @@ Move to the projects folder in your local PC (WSL - ~/gitprojects/)
 - cd ~/gitprojects/
 
 Load the repo you need to modify:
-- git clone https://github.com/kajuare/<Repo-Name>.git
+- git clone https://github.com/kajuare/Repo-Name.git
 
 Create either the .md file you want to add or the folder you need.
-- mkdir -p <Folder-Name>
-- touch <File-Name>.md -> Add the content via Vi or Nano. 
-- nano <Folder-Name>/<File-Name>.md
+- mkdir -p Folder-Name
+- touch File-Name.md -> Add the content via Vi or Nano. 
+- nano Folder-Name/File-Name.md
 
-Step I am trying to understand: 
-- git add <Folder>/<File>.md
-- git commit -m "Aqui va una descipcion para el folder que se creo anteriormente".
-Note: creo que aqui en el commit es que se crea el folder o se actualzia en GitHub y luego ademas agrega una descripcion.
-Esta misma descripcion parece se le agrego al folder y al file .mb que esta dentro. 
+Prepare the change: 
+- git add Folder/File.md
+
+Confirm Change with a message: 
+- git commit -m "Message"
+
+Push the change to the file in GitHub Repo:
 - git push
-Note: o no se si es este el que hace todo en GitHub. 
 
+## To Update a file: 
 
+Go to the repo fodler:
+- cd ~/gitprojects/Repo-Name/Folder-Name/
+
+Review if current dat local is updated with the one in Git Repo:
+- git pull
+
+Edit the file you need to update: 
+- nano Folder-Name/Fileto-to-modify.md
+
+Review the change:
+- git status
+- git diff
+
+Prepare the change: 
+- git add 01-identity/entra-id-basics.md
+ 
+Confirm Change with a message: 
+- git commit -m "Message"
+
+Push the change to the file in GitHub Repo:
+- git push
