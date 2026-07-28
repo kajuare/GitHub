@@ -32,7 +32,7 @@ Push the change to the file in GitHub Repo:
 - git push
 
 # Diagram:
-![GitHub Modify Repo](/GitHub/ImagesGit/modify_repo_add_content_final.png)
+![GitHub Modify Repo](GitHub/ImagesGit/modify_repo_add_content_final.png)
 
 ## To Update a file: 
 
