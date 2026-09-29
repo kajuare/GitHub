@@ -78,5 +78,15 @@ or
 ## Diagram:
 ![GitHub Update Images](../ImagesGit/upload_images_flow.png)
 
+# Manage branches: 
+
+To create a new branch: 
+- git checkout -b <branch name>
+
+To review on which branch are you working on
+- git branch
+
+To make local branch to appear in Github: 
+- git push -u origin <branch name>
 
 
