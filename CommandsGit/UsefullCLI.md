@@ -61,6 +61,18 @@ Push the change to the file in GitHub Repo:
 ## Diagram:
 ![GitHub Update Repo](../ImagesGit/update_existing_file.png)
 
+# To recover a file verions from a commit: 
+- git restore <filename>
+    note: it till restore the last version of the file that was commited.
+
+# To recover a staged file: 
+- git restore --staged <filename>
+    note: this takes the file version from stagin to modified area.
+- git rm --cache <filename>
+    note: this takes the file version from stagin to untracked.
+
+# To exclude files from git radar ot be taking in count:
+- Create a file ".gitignore" and add the name of the files you want git to ignore. 
 
 # To upload images: 
 
@@ -82,6 +94,33 @@ or
 
 To review modifications and commits: 
 - git log
+- git log --name-only
+    note: list the files changed. 
+- git log --oneline
+    note: shows the commit ID and message.
+- git log --graph --decorate
+    note: lets you review from which branch a brahc was creted from. 
+- git log --graph --oneline --decorate --all
+    note: shows you a little graph and which branches sahre common ancestor. 
+- git reflog --all
+    note: shows you a full log of the actions taken. 
+- git stash 
+    note: sets the changes in a waiting area without commit. 
+- git stash pop 
+    note: takes stashed changes back to the working area. 
+- git stash list
+    note: shows all stashed files
+- git stash show stash@{1}
+    note: shows the content of the specific stash. 
+- git stash pop stash@{1}
+    note:  return the specific stashed file tothe working area. 
+- git revert <has # of the commit>
+    Note: the revert option keeps the changes if latter needs to be used.
+- git reset --soft HEAD~# (the number refers to the positions you need to undo starting from 0).
+    Note: flag --soft helps keep the changes - --hard flag helps discard the changes. 
+- git reflog
+    note: shows a history of the actions taken. 
+
 
 # Manage branches: 
 
@@ -97,11 +136,35 @@ To create a new branch and switch to it:
 To review on which branch are you working on:
 - git branch
 
+To review branch is updated with the origin:
+- git branch -vv
+
 To make local branch to appear in Github: 
 - git push -u origin <branch name>
 
 Delete a branch:
 - git branch -d max
+
+See al local and remote branches: 
+- git branch -a
+
+To get chenges done in the main branch added to our local branch: 
+- git fetch origin master
+
+To fetch and merge remote changes to our local master branch: 
+- git pull origin master
+
+
+
+# Merging branches: 
+
+## Fast-forward merge: 
+**The current master or main branch do not have any update or recent change ahead of the branch we want to merge.**
+
+- git checkout master
+- git merge <BranchName>
+
+
 
 # Understanding Git Merge: Fast-Forward vs. No-Fast-Forward (`--no-ff`)
 
@@ -189,3 +252,31 @@ C0 --- C1 ----------- M ( <main branch name> )
 | **Git History** | Straight line (Linear) | Branching tree (Non-linear) |
 | **Easy to revert full feature?** | Harder (must revert individual commits) | Easier (revert the single merge commit `M`) |
 | **Default behavior?** | Yes (if no diverging commits exist) | No (must pass `--no-ff` flag) |
+
+
+# Key concept
+
+## Branches contain commits, not uncommitted files.
+**An untracked or uncommitted file belongs to the working directory, not to a branch.**
+
+# Git commands
+
+## Porcelain commands: 
+git add 
+git status
+git commit
+git stash
+
+## Plumbing commands:
+git hash-object 
+git ls-files
+git rev-parse
+git ls-remote
+git cat-file -p <first portion of the hash of the commit>
+
+# Git Object Contents: 
+**Folders in the Object folder can be next types:** 
+
+Commit: just a commit  
+tree: folder on your file system asociated with the repository.
+blob: PIECE OF DATA 
